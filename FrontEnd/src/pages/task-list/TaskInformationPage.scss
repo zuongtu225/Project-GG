@@ -1,0 +1,488 @@
+$first-color: #7fa47b;
+$second-color: #ddeef1;
+$third-color: black;
+$fourth-color: #7fa47b;
+$fifth-color: white;
+$sixth-color: #eeeae4;
+$seventh-color: #ded2c8;
+$eighth-color: lightgray;
+
+$res-mobile: 'only screen and (max-width: 767px)';
+$res-tablet: 'only screen and (min-width: 767px) and (max-width: 1023px)';
+$res-desktop: 'only screen and (min-width: 1023px)';
+
+@mixin responsive-mobile {
+  @media #{$res-mobile} {
+    @content;
+  }
+}
+@mixin responsive-tablet {
+  @media #{$res-tablet} {
+    @content;
+  }
+}
+@mixin responsive-desktop {
+  @media #{$res-desktop} {
+    @content;
+  }
+}
+
+@include responsive-mobile {
+  .task-list {
+    &__header {
+      & h1 {
+        padding: 20px 0 0 10px;
+        font-size: 20px;
+      }
+
+      & button {
+        font-weight: bold;
+        font-size: 10px;
+        border-radius: 3px;
+        padding: 5px;
+        margin-top: 50px;
+        background-color: $third-color;
+        color: $fifth-color;
+      }
+
+      padding: 7px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__table {
+      & tr {
+        position: relative;
+        border: 1px solid $third-color;
+      }
+
+      & th {
+        text-align: center;
+        padding: 1px;
+        font-size: 9px;
+        background-color: $fifth-color;
+        border: 1px solid $eighth-color;
+      }
+
+      & td {
+        padding: 2px;
+        font-size: 9px;
+        border: 1px solid $eighth-color;
+      }
+
+      &__taskname {
+        padding-top: 12px;
+      }
+
+      & tr:nth-child(even) {
+        background-color: $second-color;
+      }
+
+      &__option--child p {
+        width: 5px;
+        height: 100%;
+        background-color: $seventh-color;
+      }
+
+      &__option--child h4 {
+        margin-top: 8px;
+        font-size: 15px;
+      }
+
+      &__option button {
+        float: right;
+        margin-top: 7px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px 7px;
+        font-size: 12px;
+        background-color: $fifth-color;
+      }
+
+      &__btn__edit {
+        margin: 5px;
+        font-size: 9px;
+        padding: 2px 3px;
+        border-radius: 2px;
+        border: 1px solid $eighth-color;
+      }
+
+      &__tooltip {
+        padding-top: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      &__tooltip &__tooltiptext {
+        visibility: hidden;
+        background-color: $third-color;
+        color: $fifth-color;
+        text-align: center;
+        border-radius: 6px;
+        position: absolute;
+        top: -8px;
+        width: 350px;
+        z-index: 1;
+      }
+
+      &__tooltip:hover &__tooltiptext {
+        visibility: visible;
+      }
+
+      &__option {
+        border-radius: 5px;
+        z-index: 1;
+        position: absolute;
+        top: -100px;
+        left: 180px;
+        width: 230px;
+        height: 140px;
+        padding: 7px;
+        background-color: $sixth-color;
+      }
+
+      &__option--hidden {
+        display: none;
+      }
+
+      &__option--child {
+        cursor: pointer;
+        background-color: $fifth-color;
+        margin-top: 5px;
+        padding-right: 10px;
+        justify-content: space-between;
+        border: 1px solid $eighth-color;
+        height: 40px;
+        display: flex;
+      }
+
+      &__option--child:hover {
+        background-color: $seventh-color;
+      }
+
+      border: 1px solid $third-color;
+      margin: 15px 0;
+    }
+
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .icon-option {
+    margin-top: 7px;
+    font-size: 20px;
+  }
+}
+
+@include responsive-tablet {
+  .task-list {
+    &__header {
+      & h1 {
+        padding: 40px 0 0 10px;
+        font-size: 25px;
+      }
+
+      & button {
+        border-radius: 3px;
+        padding: 5px 5px 10px;
+        height: 35px;
+        margin-top: 50px;
+        background-color: $third-color;
+        color: $fifth-color;
+      }
+
+      padding: 7px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__table {
+      & tr {
+        position: relative;
+        border: 1px solid $third-color;
+      }
+
+      & th {
+        text-align: center;
+        padding: 7px;
+        font-size: 10px;
+        background-color: $fifth-color;
+        border: 1px solid $eighth-color;
+      }
+
+      & td {
+        font-size: 14px;
+        padding: 7px;
+        border: 1px solid $eighth-color;
+      }
+
+      & th:last-child {
+        width: 120px;
+        padding: 5px;
+      }
+
+      & th:nth-child(2) {
+        width: 280px;
+        padding: 5px;
+      }
+
+      &__taskname {
+        padding-top: 12px;
+      }
+
+      & tr:nth-child(even) {
+        background-color: $second-color;
+      }
+
+      &__option--child p {
+        width: 5px;
+        height: 100%;
+        background-color: $seventh-color;
+      }
+
+      &__option--child h4 {
+        margin-top: 8px;
+        font-size: 15px;
+      }
+
+      &__option button {
+        float: right;
+        margin-top: 7px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px 7px;
+        font-size: 12px;
+        background-color: $fifth-color;
+      }
+
+      &__btn__edit {
+        font-size: 12px;
+        padding: 2px 3px;
+        border-radius: 2px;
+        border: 1px solid $eighth-color;
+      }
+
+      &__tooltip {
+        padding-top: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      &__tooltip &__tooltiptext {
+        visibility: hidden;
+        background-color: $third-color;
+        color: $fifth-color;
+        text-align: center;
+        border-radius: 6px;
+        position: absolute;
+        top: -8px;
+        width: 350px;
+        z-index: 1;
+      }
+
+      &__tooltip:hover &__tooltiptext {
+        visibility: visible;
+      }
+
+      &__option {
+        border-radius: 5px;
+        z-index: 1;
+        position: absolute;
+        top: -100px;
+        left: 180px;
+        width: 230px;
+        height: 140px;
+        padding: 7px;
+        background-color: $sixth-color;
+      }
+
+      &__option--hidden {
+        display: none;
+      }
+
+      &__option--child {
+        cursor: pointer;
+        background-color: $fifth-color;
+        margin-top: 5px;
+        padding-right: 10px;
+        justify-content: space-between;
+        border: 1px solid $eighth-color;
+        height: 40px;
+        display: flex;
+      }
+
+      &__option--child:hover {
+        background-color: $seventh-color;
+      }
+
+      width: 100%;
+      border: 1px solid $third-color;
+      margin: 15px 0;
+    }
+
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .icon-option {
+    margin-top: 7px;
+    font-size: 20px;
+  }
+}
+
+@include responsive-desktop {
+  .task-list {
+    &__header {
+      & h1 {
+        padding: 40px 0 0 10px;
+        font-size: 30px;
+      }
+
+      & button {
+        border-radius: 3px;
+        padding: 5px 5px 10px;
+        height: 35px;
+        margin-top: 50px;
+        background-color: $third-color;
+        color: $fifth-color;
+      }
+
+      padding: 7px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__table {
+      & tr {
+        position: relative;
+        border: 1px solid $third-color;
+      }
+
+      & th {
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 12px;
+        background-color: $fifth-color;
+        border: 1px solid $eighth-color;
+      }
+
+      & td {
+        font-size: 14px;
+        padding: 12px 15px 5px;
+        border: 1px solid $eighth-color;
+      }
+
+      & th:last-child {
+        width: 120px;
+        padding: 5px;
+      }
+
+      & th:nth-child(2) {
+        width: 280px;
+        padding: 5px;
+      }
+
+      &__taskname {
+        padding-top: 12px;
+      }
+
+      & tr:nth-child(even) {
+        background-color: $second-color;
+      }
+
+      &__option--child p {
+        width: 5px;
+        height: 100%;
+        background-color: $seventh-color;
+      }
+
+      &__option--child h4 {
+        margin-top: 8px;
+        font-size: 15px;
+      }
+
+      &__option button {
+        float: right;
+        margin-top: 7px;
+        border-radius: 5px;
+        border: none;
+        padding: 5px 7px;
+        font-size: 12px;
+        background-color: $fifth-color;
+      }
+
+      &__btn__edit {
+        font-size: 12px;
+        padding: 2px 3px;
+        margin-left: 20px;
+        border-radius: 2px;
+        border: 1px solid $eighth-color;
+      }
+
+      &__tooltip {
+        padding-top: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      &__tooltip &__tooltiptext {
+        visibility: hidden;
+        background-color: $third-color;
+        color: $fifth-color;
+        text-align: center;
+        border-radius: 6px;
+        position: absolute;
+        top: -8px;
+        width: 350px;
+        z-index: 1;
+      }
+
+      &__tooltip:hover &__tooltiptext {
+        visibility: visible;
+      }
+
+      &__option {
+        border-radius: 5px;
+        z-index: 1;
+        position: absolute;
+        top: -100px;
+        left: 180px;
+        width: 230px;
+        height: 140px;
+        padding: 7px;
+        background-color: $sixth-color;
+      }
+
+      &__option--hidden {
+        display: none;
+      }
+
+      &__option--child {
+        cursor: pointer;
+        background-color: $fifth-color;
+        margin-top: 5px;
+        padding-right: 10px;
+        justify-content: space-between;
+        border: 1px solid $eighth-color;
+        height: 40px;
+        display: flex;
+      }
+
+      &__option--child:hover {
+        background-color: $seventh-color;
+      }
+
+      width: 100%;
+      border: 1px solid $third-color;
+      margin: 15px 0;
+    }
+
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  .icon-option {
+    margin-top: 7px;
+    font-size: 20px;
+  }
+}

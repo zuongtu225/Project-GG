@@ -1,0 +1,30 @@
+@import '../../common/variable.common.css';
+
+.btn-template {
+  height: 40px;
+  padding: 0 20px;
+}
+
+.main {
+  justify-content: space-between;
+
+  &-right {
+    border: 1px solid var(--first-white);
+    box-shadow: 5px 5px 10px var(--first-white);
+    transition: 1s;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 60%;
+    background-color: var(--second-white);
+    padding: 0 10px;
+    overflow: auto;
+    height: auto;
+    max-height: 200px;
+  }
+}
+
+.scroll {
+  height: auto;
+  max-height: 200px;
+}

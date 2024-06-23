@@ -1,0 +1,415 @@
+$color1: #000;
+$color2: #ccc;
+$color3: #fff;
+$color4: red;
+$color5: #2f7b27;
+$color6: #e8f1e8;
+$color7: #85b380;
+$color8: #eef6ee;
+$color9: #aca9a9;
+
+.signup-task-container {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  border: 2px solid $color1;
+  padding: 0 60px 20px;
+  position: relative;
+  margin-bottom: 20px;
+  border-radius: 7px;
+
+  .datepicker {
+    height: 35px;
+    outline: none;
+    border: 1px solid $color2;
+    border-radius: 4px;
+    padding-left: 10px;
+  }
+
+  &__content-error {
+    color: $color4;
+    margin-top: -9px;
+  }
+
+  .time {
+    outline: none;
+    padding: 6px 0;
+    border: 1px solid $color2;
+    border-radius: 4px;
+    text-align: center;
+    width: 70px;
+    margin-left: 3px;
+  }
+
+  &__btn-delete-component {
+    font-size: 22px;
+    position: absolute;
+    right: -7%;
+    top: 43%;
+    border: none;
+    background-color: $color3;
+  }
+
+  &__content-timepicker {
+    display: flex;
+    justify-content: space-between;
+
+    :last-child {
+      margin-left: auto;
+    }
+  }
+
+  &__content-effort {
+    width: 43%;
+    padding-top: 15px;
+    padding-right: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    input {
+      border: none;
+      border-radius: 3px;
+      width: 100px;
+      color: $color5;
+      font-weight: bolder;
+      font-size: 18px;
+      letter-spacing: 2px;
+      background-color: $color6;
+      text-align: center;
+      padding: 12px 0 2px;
+    }
+  }
+
+  p {
+    margin-bottom: 5px !important;
+    margin-top: 15px;
+  }
+}
+
+.title-signup-task {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.btn-signup-task-group {
+  width: 400px;
+  margin: 0 auto;
+
+  .btn-signup-task {
+    padding: 8px 13px;
+    background-color: $color7;
+    color: $color3;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 40px 50px 25px 45px;
+
+    &.disabled-btn-signup-task {
+      background-color: #b0c0af;
+    }
+  }
+}
+
+.custom-select {
+  position: relative;
+  margin-bottom: 20px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: 37px;
+  }
+
+  &__selected {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    max-height: 315px;
+    overflow-y: auto;
+    border: 1px solid $color2;
+    z-index: 1;
+    background-color: $color3;
+    border-radius: 6px;
+    box-shadow:
+      2px 2px 5px #e4e4e7,
+      -2px -2px 5px #e4e4e7;
+    padding: 7px 0;
+
+    &-option {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      cursor: pointer;
+      justify-content: space-between;
+      padding-right: 20px;
+      color: $color1;
+
+      button {
+        background-color: $color7;
+        border-radius: 5px;
+        padding: 8px 13px;
+        border: none;
+        color: $color3;
+        font-size: 14px;
+      }
+
+      &-tooltip {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        border: none;
+        width: 400px;
+        color: $color1;
+      }
+
+      &:hover {
+        background-color: $color8;
+      }
+    }
+  }
+
+  &__header-input {
+    width: 100%;
+    height: 100%;
+    margin-top: 15px;
+    border-radius: 6px;
+    border: 1px solid $color9;
+    padding: 5px 0 3px 5px;
+  }
+}
+
+@media only screen and (650px <= width <= 1240px) {
+  .signup-task-container {
+    display: block;
+    width: 90%;
+    border: 2px solid $color1;
+    padding: 0 5px 20px;
+    position: relative;
+    margin: 10px 5px 20px;
+    border-radius: 7px;
+
+    .tooltip {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      border: none;
+      width: 300px;
+    }
+
+    .datepicker {
+      width: 90%;
+      height: 35px;
+      outline: none;
+      border: 1px solid $color2;
+      border-radius: 4px;
+      padding-left: 10px;
+    }
+
+    .time {
+      padding: 6px 0;
+      outline: none;
+      border: 1px solid $color2;
+      border-radius: 4px;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .signup-task-container__btn-delete-component {
+      font-size: 22px;
+      position: absolute;
+      right: -13%;
+      top: 43%;
+      border: none;
+      background-color: transparent;
+    }
+
+    .signup-task-container__content-effort {
+      width: 50%;
+      padding-top: 15px;
+      padding-right: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  .btn-signup-task-group {
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  .custom-select {
+    width: 100%;
+  }
+}
+
+@media only screen and (370px <= width <= 650px) {
+  .signup-task-container {
+    display: block;
+    width: 90%;
+    border: 2px solid $color1;
+    padding: 0 5px 20px;
+    position: relative;
+    margin: 10px 5px 20px;
+    border-radius: 7px;
+
+    .custom-select {
+      position: relative;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+
+    .signup-task-container__content-timepicker {
+      width: 100%;
+      display: block;
+    }
+
+    .signup-task-container__content-timepicker:last-child {
+      margin-left: auto;
+    }
+
+    .datepicker {
+      width: 100%;
+      height: 35px;
+      outline: none;
+      border: 1px solid $color2;
+      border-radius: 4px;
+      padding-left: 10px;
+    }
+
+    .time {
+      padding: 6px 0;
+      outline: none;
+      border: 1px solid $color2;
+      border-radius: 4px;
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .signup-task-container__btn-delete-component {
+      font-size: 22px;
+      position: absolute;
+      right: -13%;
+      top: 43%;
+      border: none;
+      background-color: transparent;
+    }
+
+    .signup-task-container__content-effort {
+      width: 100%;
+      padding-top: 15px;
+      padding-right: 3px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  .btn-signup-task-group {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn-signup-task {
+      padding: 8px 13px;
+      background-color: $color7;
+      color: $color3;
+      border: none;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      font-size: 16px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media only screen and (width <= 380px) {
+  .signup-task-container {
+    display: block;
+    width: 90%;
+    border: 2px solid $color1;
+    padding: 0 5px 20px;
+    position: relative;
+    margin: 10px 5px 20px;
+    border-radius: 7px;
+  }
+
+  .custom-select {
+    position: relative;
+    margin-bottom: 20px;
+    width: 180px;
+  }
+
+  .signup-task-container__content-timepicker {
+    width: 100%;
+    display: block;
+
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+
+  .datepicker {
+    width: 180px;
+    height: 35px;
+    outline: none;
+    border: 1px solid $color2;
+    border-radius: 4px;
+    padding-left: 10px;
+  }
+
+  .time {
+    padding: 6px 0;
+    outline: none;
+    border: 1px solid $color2;
+    border-radius: 4px;
+    width: 180px;
+    margin-left: 0;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .signup-task-container__btn-delete-component {
+    font-size: 22px;
+    position: absolute;
+    right: -15%;
+    top: 43%;
+    border: none;
+    background-color: transparent;
+  }
+
+  .signup-task-container__content-effort {
+    width: 180px;
+    padding-top: 15px;
+    padding-right: 3px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .btn-signup-task-group {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: -50px;
+  }
+
+  .btn-signup-task {
+    padding: 8px 13px;
+    background-color: $color7;
+    color: $color3;
+    border: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    font-size: 16px;
+  }
+}

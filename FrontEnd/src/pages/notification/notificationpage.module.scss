@@ -1,0 +1,134 @@
+@import '../../common/variable.common.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notification {
+  padding: 20px;
+
+  &__board {
+    border: 1px ridge var(--border-color);
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    & button {
+      font-size: 15px;
+      width: 150px;
+      margin: 20px auto 0;
+      display: block;
+    }
+
+    &-date-form {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &-date-form-label {
+      display: flex;
+      justify-content: space-between;
+      width: 390px;
+      margin: 10px auto;
+      gap: 20px;
+    }
+
+    &-date-form-selection {
+      width: 400px;
+    }
+
+    &-requirement {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &-requirement-info {
+      display: grid;
+      grid-template-columns: 1fr 7fr;
+      gap: 20px;
+      align-items: center;
+      width: 100%;
+
+      & input {
+        border-radius: 5px;
+        border: 1px ridge var(--white-color);
+        width: 100%;
+        font-size: 18px;
+      }
+
+      & input:focus {
+        outline: none;
+        border: 1px solid var(--focus-color);
+      }
+
+      & textarea {
+        border-radius: 5px;
+        border: 1px ridge var(--white-color);
+        width: 100%;
+        font-size: 18px;
+      }
+
+      & textarea:focus {
+        outline: none;
+        border: 1px solid var(--focus-color);
+      }
+    }
+
+    &-date-form-message-error {
+      color: var(--red-color);
+      font-size: 14px;
+    }
+  }
+}
+
+/* Tablet */
+@media (768px <=width <=1023px) {
+  .notification__board {
+    padding: 20px;
+
+    &-date-form {
+      width: 100%;
+    }
+  }
+}
+
+/* Mobile */
+@media (width <=768px) {
+  :global(.ant-picker-panels) {
+    flex-direction: column !important;
+  }
+
+  .notification__board {
+    padding: 15px;
+
+    &-requirement-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &-date-form {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    &-date-form-label {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 10px auto;
+      gap: 20px;
+    }
+
+    &-date-form-selection {
+      width: 100%;
+    }
+  }
+}
